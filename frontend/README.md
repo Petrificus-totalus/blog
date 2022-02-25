@@ -68,3 +68,64 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# vanilla-tilt
+
+`npm i vanilla-tilt`
+
+```html
+<div class="ele" data-tilt></div>
+```
+
+```javascript
+import VanillaTilt from "vanilla-tilt";
+
+VanillaTilt.init(document.querySelectorAll(".ele"), {
+  max: 25,
+  speed: 300,
+});
+```
+
+# mobx
+
+`npm i mobx`
+`npm i mobx-react-lite` 只能在函数组件中用
+
+# antd
+
+`npm i antd@3`
+
+## 按需引入
+
+antd 文档 3.x
+
+1. `yarn add react-app-rewired customize-cra babel-plugin-import`
+
+2. 创建 `config-overrides.js` 与 `package.json` 同级
+
+   ```javascript
+   // config-overrides.js
+   const { override, fixBabelImports } = require("customize-cra");
+   module.exports = override(
+     fixBabelImports("import", {
+       libraryName: "antd",
+       libraryDirectory: "es",
+       style: "css",
+     })
+   );
+   ```
+
+3. `package.json` 中改几条命令 `"start": "react-app-rewired start"`
+
+4. 直接用 `import { Button} from 'antd'`
+
+# FlipCard
+
+```jsx
+// 插槽第一行是卡片正面内容，第二行是背面内容
+<FlipCard>
+  <div className={`box shadow${index + 1}`}>CSS Code</div>
+  <Code css={item} showLineNumbers={true} />
+</FlipCard>
+// 在FlipCard中props.children[0] 和 [1] 拿到
+```

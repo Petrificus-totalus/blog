@@ -1,0 +1,170 @@
+.shadows-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2ec194;
+}
+
+.shadows-container .shadows {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* z-index: 1; */
+}
+.shadows-container .shadows .boxs {
+  position: relative;
+  width: 240px;
+  height: 160px;
+  margin: 40px;
+}
+
+.shadows-container .shadows .box {
+  position: relative;
+  width: 240px;
+  height: 160px;
+  background: #fff;
+  font-family: consolas;
+  font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.shadows-container .shadows .box.shadow1 {
+  box-shadow: -20px 20px 13px rgba(0, 0, 0, 0.3);
+}
+
+.shadows-container .shadows .box.shadow2::before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 10%;
+  width: 90%;
+  height: 33px;
+  background: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transform: skewY(5deg);
+  z-index: -1;
+  filter: blur(4px);
+}
+
+.shadows-container .shadows .box.shadow3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  transform-origin: right;
+  transform: skewY(-8deg);
+  z-index: -1;
+  filter: blur(6px);
+}
+
+.shadows-container .shadows .box.shadow3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transform: skewY(8deg);
+  z-index: -1;
+  filter: blur(6px);
+}
+
+.shadows-container .shadows .box.shadow4::before {
+  content: "";
+  position: absolute;
+  bottom: -33px;
+  left: 5%;
+  width: 90%;
+  height: 13px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(6px);
+}
+
+.shadows-container .shadows .box.shadow5::before {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  filter: blur(6px);
+}
+
+.shadows-container .shadows .box.shadow6 {
+  background: #2ec194;
+  border-radius: 10px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+    10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shadows-container .shadows .box.shadow7 {
+  background: #2ec194;
+  border-radius: 10px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+    10px 10px 10px rgba(0, 0, 0, 0.1),
+    inset -4px -4px 4px rgba(255, 255, 255, 0.2),
+    inset 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-code {
+  height: 400px;
+}
+
+.shadows .boxs:nth-child(1) .back:hover {
+  width: 360px;
+  left: -60px;
+  right: -20px;
+}
+
+.shadows .boxs:nth-child(2) .back:hover {
+  height: 243px;
+  top: -40px;
+  bottom: -10px;
+}
+
+.shadows .boxs:nth-child(3) .back:hover {
+  height: 480px;
+  top: -180px;
+  bottom: -110px;
+}
+
+.shadows .boxs:nth-child(4) .back:hover {
+  height: 220px;
+  top: -40px;
+  bottom: -10px;
+}
+
+.shadows .boxs:nth-child(5) .back:hover {
+  height: 200px;
+  top: -10px;
+  bottom: -40px;
+}
+
+.shadows .boxs:nth-child(6) .back:hover {
+  width: 324px;
+  left: -40px;
+  right: -40px;
+}
+.shadows .boxs:nth-child(7) .back:hover {
+  width: 343px;
+  height: 200px;
+  left: -30px;
+  right: -55px;
+  bottom: -30px;
+}

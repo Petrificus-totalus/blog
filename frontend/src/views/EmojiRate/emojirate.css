@@ -1,0 +1,73 @@
+.emoji-rate-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.emoji-rate-left {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #20122d;
+}
+
+.emoji-rate-code {
+  height: 100%;
+  flex: 17;
+  overflow: scroll;
+}
+
+.emoji-rating {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.emoji-rating input {
+  display: none;
+}
+.emoji-rating label {
+  position: relative;
+  width: 0;
+  height: 64px;
+  cursor: pointer;
+  transition: 0.5s;
+  filter: grayscale(1);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emoji-rating:hover label {
+  width: 80px;
+  opacity: 0.2;
+}
+
+.emoji-rating input:hover + label,
+.emoji-rating input:checked + label {
+  filter: grayscale(0);
+  opacity: 1;
+}
+.emoji-rating label h4 {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding-top: 10px;
+  opacity: 0;
+  transform: translateY(-25px) scale(0);
+  transition: 0.5s;
+}
+
+.emoji-rating input:hover + label h4,
+.emoji-rating input:checked + label h4 {
+  opacity: 1;
+  transform: translateY(0) scale(1.2);
+}
+
+.emoji-rating img {
+  height: 64px;
+}
