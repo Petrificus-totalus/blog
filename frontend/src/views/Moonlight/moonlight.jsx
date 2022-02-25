@@ -5,8 +5,11 @@ import { observer } from "mobx-react-lite";
 
 import Code from "../../components/code";
 import ThemeSelect from "../../components/themeSelect";
+import { useNavigate } from "react-router-dom";
 
-function Moonlight(props) {
+function Moonlight() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     let stars = document.getElementById("stars");
     let moon = document.getElementById("moon");
@@ -41,7 +44,7 @@ function Moonlight(props) {
           href="javascript:;"
           className="logo"
           onClick={() => {
-            props.history.push("/");
+            navigate("/");
           }}
         >
           Home

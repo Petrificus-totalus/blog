@@ -1,17 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./Home";
-import Detail from "./views";
 
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+import App from "./routes"; // 所有路由配置文件
 
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <Switch>
-        <Route path="/detail" component={Detail}></Route>
-        <Route path="/" exact component={Home}></Route>
-      </Switch>
+      <App />
     </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")

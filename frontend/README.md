@@ -129,3 +129,7 @@ antd 文档 3.x
 </FlipCard>
 // 在FlipCard中props.children[0] 和 [1] 拿到
 ```
+
+# swiper.js
+
+使用 History 功能时 项目要使用 HashRouter

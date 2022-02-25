@@ -1,15 +1,15 @@
-import { withRouter } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function ToHome(props) {
+export default function ToHome() {
+  const navigate = useNavigate();
+
   return (
     <button
       onClick={() => {
-        props.history.push("/");
+        navigate("/");
       }}
     >
       home
     </button>
   );
 }
-
-export default withRouter(ToHome);

@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { observer } from "mobx-react-lite";
 import store from "./store";
 
+import { useNavigate } from "react-router-dom";
+
 import "swiper/css";
 import "./Home.css";
 import { slides } from "./constant";
@@ -24,7 +26,8 @@ import {
 } from "swiper";
 import VanillaTilt from "vanilla-tilt";
 
-function Home(props) {
+function Home() {
+  const navigate = useNavigate();
   const [currentSwiperIndex, setCurrentSwiperIndex] = useState(0);
   useEffect(() => {
     // slide 3D 效果
@@ -34,7 +37,7 @@ function Home(props) {
     });
   });
   const detail = (name) => {
-    props.history.push(`/detail/${name}`);
+    navigate(`/detail/${name}`);
   };
 
   return (

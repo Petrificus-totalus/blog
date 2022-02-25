@@ -2,7 +2,6 @@ import { Menu, Dropdown, Icon } from "antd";
 
 import React from "react";
 import themes from "./themes";
-import { withRouter } from "react-router-dom";
 
 import store from "../../store";
 import { observer } from "mobx-react-lite";
@@ -51,5 +50,4 @@ function ThemeSelect() {
     </div>
   );
 }
-
-export default withRouter(observer(ThemeSelect));
+export default observer(ThemeSelect);
