@@ -68,7 +68,7 @@ function Cube() {
           <img src="/imgs/cube/6.jpg" alt="" />
         </div>
       </div>
-      <div className="cube-code">
+      <div className="cube-code code">
         <Code {...code} />
       </div>
     </div>

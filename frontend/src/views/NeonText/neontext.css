@@ -11,6 +11,7 @@
 .neon-text-code {
   width: 75%;
   flex: 4;
+  overflow: scroll;
 }
 * {
   /* 清除预设margin和padding */

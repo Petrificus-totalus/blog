@@ -126,7 +126,7 @@ function EmojiRate() {
           </label>
         </div>
       </div>
-      <div className="emoji-rate-code">
+      <div className="emoji-rate-code code">
         <Code {...code} />
       </div>
     </div>

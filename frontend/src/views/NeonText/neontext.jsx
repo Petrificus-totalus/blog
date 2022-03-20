@@ -83,7 +83,7 @@ function NeonText() {
           <span style={{ "--o": 8 }}>e</span>
         </h2>
       </div>
-      <div className="neon-text-code">
+      <div className="neon-text-code code">
         <Code {...code} />
       </div>
     </div>

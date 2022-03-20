@@ -130,7 +130,7 @@ function SmokeText() {
         </p>
       </section>
 
-      <div className="smoketext-code">
+      <div className="smoketext-code code">
         <Code {...code} />
       </div>
     </div>

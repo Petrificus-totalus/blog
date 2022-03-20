@@ -118,7 +118,7 @@ function FlexibleSearch() {
           </div>
         </div>
       </div>
-      <div className="flexiblesearch-code">
+      <div className="flexiblesearch-code code">
         <Code {...code} />
       </div>
     </div>

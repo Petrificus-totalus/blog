@@ -3,12 +3,14 @@ import ThemeSelect from "../components/themeSelect";
 import ToHome from "../components/toHome";
 import { Outlet, useLocation } from "react-router-dom";
 
+import "./index.css";
+
 const noThemeSelectPaths = ["/detail/Moonlight"]; // 不加载 ThemeSelect 组件的那些路径
 
 export default function Index() {
   const location = useLocation();
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative" }} className="content_main">
       {!noThemeSelectPaths.includes(location.pathname) && (
         <div
           style={{
