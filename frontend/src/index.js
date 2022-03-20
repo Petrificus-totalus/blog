@@ -7,7 +7,9 @@ import App from "./routes"; // 所有路由配置文件
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <App />
+      <React.Suspense fallback={<div>loading...</div>}>
+        <App />
+      </React.Suspense>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
